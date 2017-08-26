@@ -18,7 +18,7 @@ export class UsersController {
         const users = await this.usersService.getAllUsers();
         res.status(HttpStatus.OK).json(users);
     }
-
+//
     @Get('/:id')
     public async getUser(@Res() res: Response, @Param('id') id: string) {
         const user = await this.usersService.getUser(id);
